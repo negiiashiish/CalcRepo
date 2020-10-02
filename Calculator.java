@@ -1,20 +1,35 @@
-class Calculator{
-  public static int add(int a,int b){
+import java.util.Scanner;
+
+public class Calculator{
+    
+  static int add(int a,int b){
     return a+b;
   }
+  
   public static int sub(int a,int b){
     return a-b;
   }
+  
    public static int mul(int a,int b){
      return a*b;
    }
+   
    public static int div(int a,int b){
      return a/b;
    }
+   
   public static void main(String []args){
-    System.out.println(add(10,20));
-    System.out.println(sub(10,20));
-   System.out.println(mul(10,20));
-    System.out.println(div(10,20));                       
+      
+      Scanner sc = new Scanner(System.in);
+      
+      int a,b;
+      System.out.println("Enter two  numbers");
+      a=sc.nextInt();
+      b=sc.nextInt();
+      
+      System.out.println("Addition="+add(a,b));
+      System.out.println("Subtraction="+sub(a,b));
+      System.out.println("Multiplication="+mul(a,b));
+      System.out.println("Divison="+div(a,b));                       
   }
 }
